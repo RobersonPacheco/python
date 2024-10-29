@@ -2,15 +2,15 @@ import pandas as pd
 import pyodbc
 
 # Caminho para a planilha Excel
-file_path = r'C:\Users\SIBTO\Desktop\Python\teste.xlsx'
+file_path = r'C:\Users\SuaMaquina\Desktop\PastaOrigemScript\teste.xlsx'
 
 # Lê o arquivo Excel
 df = pd.read_excel(file_path)
 
 # Conexão com o banco de dados
 conn = pyodbc.connect('Driver={SQL Server};'
-                      'Server=DESKTOP-4JH14Q1\\TRAINING;'
-                      'Database=dwLearning;'
+                      'Server=SuaMaquina\\InstaciaSQL;'
+                      'Database=NomeBaseDeDados;'
                       'Trusted_Connection=yes;')
 
 # Cria um cursor
